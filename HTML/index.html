@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+       <meta charset="utf-8" />
+         <script>
+
+          // Used to check for unsupported browsers and there by redirected the user to chrome download page after displaying them an alert
+          var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+             if(  isSafari ){
+                  alert("you are using an unsupported browser, please download the latest one");
+                  window.location = "https://www.google.com/chrome/";
+               }
+
+             if(!document.getElementById){
+                  alert("you are using an unsupported browser, please download the latest one ");
+                  window.location = "https://www.google.com/chrome/";
+               }
+
+        </script>
+        <script type="text/javascript" src="../JS/data.js"></script>
+        <script type="text/javascript" src="../JS/radiodata.js"></script>
+        <script type="text/javascript" src="../JS/client.js"></script>
+        <link rel="stylesheet" href="../CSS/style.css">
+    </head>
+
+    <body onload="createSel('Init');">
+
+    <div id="fdiv">
+    </div>
+    <div id="ldiv">
+    </div>
+    <div id="idiv">
+    </div>
+
+    </body>
+    </html>
